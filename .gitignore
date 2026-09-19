@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# SwiftPM
+.build/
+.swiftpm/
+
+# Xcode: per-user state and build output (the project itself is checked in)
+xcuserdata/
+*.xcuserstate
+DerivedData/

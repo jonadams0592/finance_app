@@ -1,11 +1,29 @@
-# macOS
+# OS metadata
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
 
 # SwiftPM
 .build/
 .swiftpm/
+Packages/
+Package.pins
 
-# Xcode: per-user state and build output (the project itself is checked in)
+# Xcode per-user state and build artifacts
+build/
+DerivedData/
 xcuserdata/
 *.xcuserstate
-DerivedData/
+*.xcscmblueprint
+*.moved-aside
+
+# Environment and secrets
+*.env
+*.env.*
+*.key
+*.pem

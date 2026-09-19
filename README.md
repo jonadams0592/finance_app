@@ -15,7 +15,7 @@ disposition of the adversarial review.
 ## Quick start
 
 ```
-git clone <this repo>
+git clone https://github.com/jonadams0592/finance_app.git
 cd Tape-iOS
 open Tape.xcodeproj
 ```
@@ -118,3 +118,7 @@ Dark-only in this version.
 No orders, no positions, no stops, no broker links. No WebSocket (trial symbols only on the
 free plan). No `/api_usage` calls (1 credit each; the counters are estimated locally). No
 third-party SDKs. No background fetch.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

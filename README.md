@@ -30,6 +30,35 @@ unique to you. A free Apple ID works; builds signed that way expire after 7 days
 
 Prices need a free Twelve Data key (see First run). Each person uses their own.
 
+## Web version
+
+`docs/index.html` is the original single-file web build of Tape, the one the iOS app was
+ported from. It is one self-contained page: no build step, no install, no server code. It
+runs in any modern browser on any computer or phone.
+
+Three ways to open it, easiest first:
+
+1. **Double-click it.** Open `docs/index.html` in Chrome, Safari, Firefox or Edge.
+2. **Local server**, if your browser is strict about pages opened from disk:
+
+   ```
+   cd finance_app/docs
+   python3 -m http.server 8000
+   ```
+
+   then visit http://localhost:8000
+3. **A real URL with GitHub Pages**, which also works from your phone: in this repo on
+   github.com go to Settings > Pages, set Source to "Deploy from a branch", pick `main` and
+   the `/docs` folder, and save. After a minute it is live at
+   https://jonadams0592.github.io/finance_app/
+
+On first open it asks for your Twelve Data key, the same free key the iOS app uses. The key
+is stored in that browser only (local storage, plain text) and is sent only to
+`api.twelvedata.com`. It is never written into the file, so the page is safe to publish;
+just do not paste a key into the source. The web build has the watchlist, the 1D / 1W / 1M
+charts and the credit governor. The ticker search is iOS only for now; on the web you add
+symbols by typing them.
+
 ## Layout
 
 ```
@@ -41,6 +70,7 @@ App/Tape/                     SwiftUI app: TapeApp, AppModel, Persistence (UserD
                               Theme, Views/ (Watchlist, Detail + Swift Charts, SearchBar, Settings)
 project.yml                   XcodeGen spec that wires the app target to the package
 XCODE_HANDOFF.md              Build steps, expected warnings, verification checklist
+docs/index.html               The single-file web build (see Web version)
 ```
 
 ## Requirements

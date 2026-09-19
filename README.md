@@ -16,7 +16,7 @@ disposition of the adversarial review.
 
 ```
 git clone https://github.com/jonadams0592/finance_app.git
-cd Tape-iOS
+cd finance_app
 open Tape.xcodeproj
 ```
 
